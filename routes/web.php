@@ -12,7 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+return Redirect::to('https://www.instagram.com/adeptiuai/');
+  //  return view('welcome');
+});
+Route::get('/guia',function(){
+return Redirect::to('https://bit.ly/guia_adepti');
+
+});
+Route::get('/encuesta',function(){
+return Redirect::to('https://docs.google.com/forms/d/e/1FAIpQLSc-3GoQCYSikYu6T7tgri73UnNUfBL6LLodDhZzADBIkCQbaQ/viewform');
 });
 
 Auth::routes();
