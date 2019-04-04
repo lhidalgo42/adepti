@@ -19,3 +19,8 @@ Auth::routes();
 Route::get('auth/{provider}', 'Auth\AuthController@redirectToProvider');
 Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallback');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('test',function (){
+    $courses = \App\Http\Controllers\Intranet2Controller::getCourses(\App\Models\User::find(3));
+    dd($courses);
+});
